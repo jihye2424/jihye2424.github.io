@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-1</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{
+            height: 100vh;
+        }
+        .item{
+            border: 1px solid #222;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 10px;
+        }
+        .item:nth-child(even){
+            background-color: rgb(255, 63, 29);
+        }
+        .item:nth-child(odd){
+            background-color: rgb(179, 255, 36);
+        }
+        .container{
+            height: 100%;
+            display: grid;
+            /* grid-template-columns: 400px 400px; */
+            /* grid-template-columns: 1fr 1fr 1fr ; */
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: 50px 100px; */
+            /* grid-auto-rows: 1fr; */
+            grid-template-rows: minmax(100px, auto);
+           /* row-gap: 20px; */
+           /* column-gap: 50px; */
+           gap:20px 50px;
+        }
+        p:nth-child(1){
+            /* grid-column: 1/3; */
+            grid-column: 1/span 2;
+        }
+        p:nth-child(3){
+            /* grid-row: 2/4; */
+            grid-row: 2/span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="item">1</p>
+        <p class="item">2</p>
+        <p class="item">3</p>
+        <p class="item">4</p>
+        <p class="item">5</p>
+        <p class="item">6</p>
+    </div>
+</body>
+
+</html>

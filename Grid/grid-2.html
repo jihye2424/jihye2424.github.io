@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid-2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+      }
+      .item {
+        border: 1px solid #222;
+        padding: 10px;
+      }
+      p:nth-child(even){
+        background-color: blueviolet;
+      }
+      p:nth-child(odd){
+        background-color: rgb(255, 189, 21);
+      }
+      .container{
+        width: 70%;
+        margin: 50px auto;
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: 200px;
+        gap :10px
+      }
+      p:nth-child(1){
+        grid-row: 1/3;
+      }
+      p:nth-child(2){
+        grid-row: 2/4;
+      }
+      p:nth-child(5){
+        grid-column: 1/4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="item">1</p>
+      <p class="item">2</p>
+      <p class="item">3</p>
+      <p class="item">4</p>
+      <p class="item">5</p>
+      
+    </div>
+  </body>
+</html>
