@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('../font/transfonter.org-20250502-072209/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('../font/transfonter.org-20250502-072209/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('../font/transfonter.org-20250502-072209/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
