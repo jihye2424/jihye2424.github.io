@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About me</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        @font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+        body{
+              font-family: 'S-CoreDream-3Light';
+            height: 100vh;
+            background-image: url(./images/bask.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        ul,li{
+            list-style: none;
+        }
+        #background{  
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            /* background-color: black;
+            opacity: 0.4;
+            display: none; */
+        } 
+        h1{
+            color: rgb(255, 255, 255);
+            text-align: left;
+            padding: 1rem;
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            text-shadow: 1px 1px 12px #222;
+        }
+
+         .slider{
+            width: 500px;
+            border-left: 4px solid #ffffff;
+            border-right: 4px solid #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+         .btn{
+            /* margin-top: 25rem; */
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+             top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        .btn>.prev,.next{ 
+            font-size: 2rem;
+            margin: 1rem;
+            cursor: pointer;
+            
+        }
+
+        .slider>#list{
+            
+            width: 2000px;
+            height: 100%;
+            display: flex;
+            
+        }
+        #list>section{
+            width: 500px;
+        }
+
+
+        /* //one */
+        #one{
+            width: 500px;
+            background-color: #FEA817;
+            position: relative;
+          
+            
+        }
+        h2{
+            padding: 2rem;
+            font-size: 3.8rem;
+            margin: 1rem 0;
+            justify-content: center;
+            background-color: white;
+            width: 85%;
+            height: 8%;
+            text-align: center;
+            box-shadow: 1px 1px 10px #222;
+        }
+        #one>.hh{
+            margin: 3rem 1rem;
+            text-align: center;
+            font-size: 2.2rem;
+        }
+        #one>.hh>span{
+            font-size: 4rem;
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 1px 10px #222;
+        }
+        #one>.one-txt{
+            padding-top: 5rem;
+            margin: 5rem 1rem;
+            font-size: 1.3rem;
+        }
+        #one>.one-txt>h3{
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+      
+       
+
+        /* //two */
+        #two{
+            width: 500px;
+            background-color: #FFDB9D;
+            font-size: 1.2rem;
+            margin: 0 auto;
+        }
+        #two>.food>ul>li{
+            margin: 0.5rem 0;
+            
+        }
+        .colors{
+            margin: 4rem 2rem;
+        }
+        .colors>p{
+            font-size: 1.5rem;
+            font-weight: bolder;
+            margin: 2rem 1rem;
+        }
+        .colors>ul>li{
+            margin: 0.5rem 0;
+        }
+        .food{
+            margin: 4rem 2rem;
+        }
+        .food>p{
+            margin: 2rem 1rem;
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+        .txt{
+            border-top: 5px dotted #fcfcfc;
+            padding: 4rem 1rem;
+            font-size: 1.2rem;
+          
+        }
+        /* //three */
+        #three{
+            width: 500px;
+            background-color: #EFDFC4 ;
+        }
+        #three>p{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1.5rem;
+        }
+        #three>img{
+            width: 300px;
+            height: 300px;
+            margin-left: 5rem;
+            
+        }
+        #three>ul{
+            margin: 2rem;
+            font-size: 1.2rem;
+        }
+        #three>ul>li{
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        #three > span{
+            margin: 1rem ;
+            font-size: 1.1rem;
+            background-color: #ffa200;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgb(104, 63, 17);
+            border-radius: 50px;
+            padding: 10px;
+            text-align: center;
+            text-shadow: 1px 1px 5px #222;
+        }
+        /* //four */
+        #four{
+            width: 500px;
+            background-color: #FFF5E5;
+            font-size: 1.2rem;
+        }
+        #four > .posi{
+            padding: 2.5rem;
+
+        }
+        h4{
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            
+        }
+        #four>.f-txt{
+            padding: 1rem 1rem;
+            
+          
+        }
+         #four>.f-txt>p{
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FEA817;
+            text-shadow: 1px 1px 1px #000000;
+            
+         }
+        #four>.bye{
+            text-align: center;
+            font-size: 3rem;
+            background-color: #FEA817;
+            margin-top: 2rem;
+            color: white;
+            text-shadow: 1px 1px 5px #222;
+            font-weight: bolder;
+            padding: 1rem;
+            box-shadow: 1px 1px 10px #222;
+        }
+    </style>
+</head>
+<body>
+    <div id="background"> 
+        <h1>ABOUT ME?</h1>
+        <div class="slider">
+            <div class="btn">
+            <div class="prev"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="next"> <i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        <div id="list">
+        <section id="one"> 
+            <h2>Hello, I'm</h2>
+            <h3 class="hh">안녕하세요.<br> 웹 퍼블리셔 지망생 <br><span>"윤지혜"</span><br> 입니다.</h3>
+            
+        <div class="one-txt">             
+            <h3>💻  기술</h3>  
+            <p>HTML / CSS / JavaScript </p>
+            <h3>🎨 디자인 도구</h3>  
+            <p>Figma / Photoshop / Illustrator</p>
+
+            <h3>🔧 협업 도구</h3>  
+            <p>Git / GitHub</p> 
+            </div>
+        </section>
+
+        <section id="two">
+            <h2>Love Things</h2>  
+            <div class="food">
+                <p>🍜 음식 </p>
+                <ul>
+                    <li>🍢 떡볶이: 매콤하고 중독적인 맛  </li>
+                    <li>🍝 마라탕: 얼얼한 중독 </li>
+                    <li>🍖 면 & 고기: 언제나 진리!</li>
+                </ul>
+            </div>
+            
+            <div class="colors">
+                <p>🎨 색깔 </p>
+                 <ul>
+                    <li>🟡 Yellow: 따뜻하고 긍정적인 에너지</li>
+                    <li>🟢 Green : 안정감과 편안함</li>
+                 </ul>
+            </div>
+            <div class="txt">
+            <p>"노랑의 따뜻함과 초록의 편안함,  
+            <br>그 두 가지 색처럼 저도 잔잔하고 생기 있는 걸 좋아해요.
+                <br>
+                좋아하는 음식은 면과 고기!  <br>
+                특히 매운 떡볶이와 얼얼한 마라탕은 저만의 스트레스 해소법이에요" </p>
+            </div>
+        </section>
+
+        <section id="three">
+            <h2> MBTI </h2>
+            <p>✨ISFP✨</p>
+            <p>호기심 많은 예술가 🌿</p>   
+       <img src="./images/isfp.png" alt="호기심많은예술가 이미지">
+        <ul>
+                <li>조용하지만 감성은 풍부하게</li>
+                <li>말보다 행동으로 표현</li>
+                <li>실용과 감성 사이의 균형</li>
+                <li>나만의 리듬으로 차분히 나아가는 사람</li>
+            </ul>
+            <span>#섬세함</span>
+            <span>#실용성</span>
+            <span>#차분함</span>
+            <span>#따듯함</span>
+        </section>
+
+        <section id="four">
+            <h2>Becoming</h2>
+            
+            <div class="posi">
+                <h4>✔️ 섬세함</h4>  
+<p>작은 디테일도 놓치지 않고,  <br>
+사용자 입장에서 한 번 더 고민합니다.</p>
+
+<h4>✔️ 유연한 태도 </h4> 
+<p>새로운 기술, 다양한 피드백을  <br>
+받아들이고 빠르게 흡수합니다.</p>
+
+<h4>✔️ 감성과 기능의 조화  </h4>
+<p>디자인 감각과 퍼블리싱 스킬을 갖춘  <br>
+웹 퍼블리셔로 성장하고 있습니다.</p>
+            </div>
+
+            <div class="f-txt">
+        <h4>🌱 되고 싶은 나 </h4> 
+<p>“사용자가 편안함을 느낄 수 있는 <br> 
+감성적인 화면을 만드는 퍼블리셔.”<br>
+</p></div> 
+
+<div class="bye">
+Until Next Time
+</div>
+           
+        </section>
+    </div>
+    </div>
+   </div>
+
+   <script src="./About.js">
+   </script>
+</body>
+</html>
