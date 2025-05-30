@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@media screen and (max-width:500px) {
+    html,body{
+        font-size: 10px;
+    }
+    main{
+        width: 90%;
+    }
+    header > .slogan > h1{
+        font-size: 8rem;
+    }
+    section {
+        height: 60vh;
+    }
+    #aboutme > .wrapper{
+        position : relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    #aboutme > .wrapper > div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #aboutme > .wrapper > .text{
+        background-color: rgba(0,0,0,0.6);
+        z-index: 5;
+        width: 100%;
+    }
+    #aboutme > .wrapper > .img > img{
+        top: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    #aboutme > .wrapper > .text> p{
+        width: 100%;
+    }
+    #contact{ 
+        margin: 8rem 1rem;
+       
+    }
+    #contact > .wrap > .image{
+    display: none;
+   }
+}

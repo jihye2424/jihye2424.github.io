@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'ELAND_Choice_M';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_M.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    height: 100vh;
+    font-family: 'ELAND_Choice_M';
+
+}
