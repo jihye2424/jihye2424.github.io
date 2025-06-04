@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>yes24.북</title>
+    </style>
+  </head>
+
+  <body>
+    <main>
+    <section id="book">
+    <div class="book">
+      <div class="page">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+      <div class="side"></div>
+    </div>
+    <script>
+      const book = document.querySelector(".book")
+      book.addEventListener("click",()=>{
+        book.classList.toggle("flipped")
+      })
+    </script>
+    </section>
+
+    <section id="detail">
+      <div class="one">
+      <div>
+        <p class="border-box">소득공제</p>
+      </div>
+      <h1>어른의 행복은 조용하다</h1>
+      <div>
+        <p class="border-r"><a href="#">태수 저</a></p>
+        <p class="border-r"><a href="#">페이지2북스</a>
+        </p>
+        <p>2024년11월04일</p>
+      </div>
+      <div>
+        <p>★★★★★ 9.5</p>
+        <p class="border-box">v</p>
+        <p class="border-r">회원리뷰(216건) </p>
+        <p class="border-r">판매자수 411,195 </p>
+        <p class="border-box">?</p>
+        <p>베스트 </p>
+        <p class="border-r">국내도서 9위 </p>
+        <p>국내도서 top20 23주 </p>
+      </div>
+    </div>
+    <div class="two">
+      <div class="gift">
+        <p class="text-red rect-radius text-border"><i class="fa-solid fa-gift"></i> 구매혜택</p>
+        <p class="text-red text-border"><a href="#">문학 레터링 에코백(택1, 포인트 차감) ></a></p>
+      </div>
+      <div>
+        <p>정가</p>
+        <p>17,800원</p>
+      </div>
+      <div>
+        <p class="text-border">판매가</p>
+        <p class="text-red text-big text-border">16,020원 <span class="text-red" style="font-weight: normal; font-size: 1rem;" > (10% 할인)</span></p>
+      </div> 
+      <div>
+        <p class="text-border">크레마머니<br>최대혜택가 <span class="border-box" style="font-weight: normal;">?</span></p>
+        <p class="text-border text-big">14,520원</p>
+      </div>
+      <div>
+        <p>YES포인트 <span class="border-box">?</span> </p>
+        <p>890원  (5% 적립)</p>
+      </div>
+      <div>
+        <P></P>
+        <p>5만원이상 구매시 2천원 추가적립<span class="border-box">?</span></p>
+      </div>
+    </div>
+    <div class="three">
+      <div>
+        <P>결제혜택</P>
+        <p>카드/간편결제 혜택을 확인하세요<span class="border-box">v</span></p>
+      </div>
+    </div>
+    <div class="four">
+      <div>
+        <p>배송안내 <span class="border-box">〉</span> </p>
+        <p>서울특별시 영등포구 은행로 11 (여의도동,일신빌딩) <a href="#" style="color: rgb(58, 58, 241);">지역변경 v</a></p>
+      </div>
+      <div class="del">
+        <span>하루배송</span>
+        <span>19시까지 주문하면 <span style="font-weight: bolder;">내일 (4/22, 화)</span> 도착예정</span>
+      </div>
+      <p>배송비 : 무료<span class="border-box">?</span></p>
+    </div>
+    </section>
+
+    </main>
+  </body>
+</html>
